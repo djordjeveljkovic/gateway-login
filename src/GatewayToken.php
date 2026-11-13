@@ -1,6 +1,6 @@
 <?php
 
-namespace NewLogin\Laravel;
+namespace GatewayLogin;
 
 use Illuminate\Support\Facades\Cache;
 use RuntimeException;

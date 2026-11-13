@@ -1,4 +1,4 @@
-# new-login-laravel
+# gateway-login
 
 Puts a Laravel app behind the **New Login gateway**. Nobody reaches the app, not even its
 login page, without first coming through `login.example.com` with an approved computer.
@@ -10,8 +10,8 @@ The package isn't on Packagist; Composer installs it straight from GitHub. In th
 folder:
 
 ```bash
-composer config repositories.new-login vcs https://github.com/djordjeveljkovic/new-login-laravel
-composer require djordjeveljkovic/new-login-laravel:^1.0
+composer config repositories.gateway-login vcs https://github.com/djordjeveljkovic/gateway-login
+composer require djordjeveljkovic/gateway-login:^1.0
 ```
 
 The first line only adds this to the app's `composer.json`, so later `composer install`
@@ -19,7 +19,7 @@ runs (deploys) find the package too:
 
 ```json
 "repositories": {
-    "new-login": { "type": "vcs", "url": "https://github.com/djordjeveljkovic/new-login-laravel" }
+    "gateway-login": { "type": "vcs", "url": "https://github.com/djordjeveljkovic/gateway-login" }
 }
 ```
 
@@ -78,7 +78,7 @@ to remember spent tokens) and a session driver other than `array`.
 ## In app code
 
 ```php
-use NewLogin\Laravel\Gateway;
+use GatewayLogin\Gateway;
 
 Gateway::user();      // ['sub' => device id, 'name' => 'Pera Perić', 'org' => 'Firma doo', 'until' => ts] or null
 Gateway::loginUrl();  // where to send someone to log in again
@@ -87,8 +87,8 @@ Gateway::loginUrl();  // where to send someone to log in again
 Events, for example to log sign-ins in the app itself:
 
 ```php
-use NewLogin\Laravel\Events\GatewayLogin;         // $sub, $name, $organization, $ip
-use NewLogin\Laravel\Events\GatewayLoginRefused;  // $reason, $ip
+use GatewayLogin\Events\GatewayLogin;         // $sub, $name, $organization, $ip
+use GatewayLogin\Events\GatewayLoginRefused;  // $reason, $ip
 
 Event::listen(GatewayLogin::class, fn ($e) => logger("gateway login: {$e->name}"));
 ```

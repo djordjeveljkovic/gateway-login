@@ -1,6 +1,6 @@
 <?php
 
-namespace NewLogin\Laravel\Events;
+namespace GatewayLogin\Events;
 
 /** A login link was refused: expired, used twice, for another app, or forged. */
 class GatewayLoginRefused

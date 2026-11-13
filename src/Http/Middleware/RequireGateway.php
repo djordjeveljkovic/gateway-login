@@ -1,11 +1,11 @@
 <?php
 
-namespace NewLogin\Laravel\Http\Middleware;
+namespace GatewayLogin\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use NewLogin\Laravel\Gateway;
+use GatewayLogin\Gateway;
 
 /**
  * Keeps everyone out who has not logged in at the gateway (see config/gateway.php).

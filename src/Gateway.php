@@ -1,6 +1,6 @@
 <?php
 
-namespace NewLogin\Laravel;
+namespace GatewayLogin;
 
 /**
  * Small helpers for app code:

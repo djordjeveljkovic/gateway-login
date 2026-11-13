@@ -1,9 +1,9 @@
 {
-    "name": "djordjeveljkovic/new-login-laravel",
+    "name": "djordjeveljkovic/gateway-login",
     "description": "Puts a Laravel app behind the New Login gateway: only approved computers get in. composer require, add four .env lines, done.",
     "type": "library",
     "license": "proprietary",
-    "homepage": "https://github.com/djordjeveljkovic/new-login-laravel",
+    "homepage": "https://github.com/djordjeveljkovic/gateway-login",
     "keywords": ["laravel", "login", "gateway", "client-certificate", "zero-trust"],
     "require": {
         "php": "^8.2",
@@ -18,15 +18,15 @@
         "phpunit/phpunit": "^12.0"
     },
     "autoload": {
-        "psr-4": { "NewLogin\\Laravel\\": "src/" }
+        "psr-4": { "GatewayLogin\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "NewLogin\\Laravel\\Tests\\": "tests/" }
+        "psr-4": { "GatewayLogin\\Tests\\": "tests/" }
     },
     "extra": {
         "laravel": {
-            "providers": ["NewLogin\\Laravel\\GatewayServiceProvider"],
-            "aliases": { "Gateway": "NewLogin\\Laravel\\Gateway" }
+            "providers": ["GatewayLogin\\GatewayServiceProvider"],
+            "aliases": { "Gateway": "GatewayLogin\\Gateway" }
         }
     },
     "scripts": {

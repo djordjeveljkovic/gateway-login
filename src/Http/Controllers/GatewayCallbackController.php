@@ -1,15 +1,15 @@
 <?php
 
-namespace NewLogin\Laravel\Http\Controllers;
+namespace GatewayLogin\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Log;
 use RuntimeException;
-use NewLogin\Laravel\Events\GatewayLogin;
-use NewLogin\Laravel\Events\GatewayLoginRefused;
-use NewLogin\Laravel\Gateway;
-use NewLogin\Laravel\GatewayToken;
+use GatewayLogin\Events\GatewayLogin;
+use GatewayLogin\Events\GatewayLoginRefused;
+use GatewayLogin\Gateway;
+use GatewayLogin\GatewayToken;
 
 /** Where the gateway sends the user after login: /gateway/callback?token=...&return=/path */
 class GatewayCallbackController extends Controller

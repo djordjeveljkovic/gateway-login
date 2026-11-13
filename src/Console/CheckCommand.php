@@ -1,9 +1,9 @@
 <?php
 
-namespace NewLogin\Laravel\Console;
+namespace GatewayLogin\Console;
 
 use Illuminate\Console\Command;
-use NewLogin\Laravel\Gateway;
+use GatewayLogin\Gateway;
 
 /** `php artisan gateway:check`: is this app set up correctly for the gateway? */
 class CheckCommand extends Command

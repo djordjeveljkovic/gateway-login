@@ -1,14 +1,14 @@
 <?php
 
-namespace NewLogin\Laravel;
+namespace GatewayLogin;
 
 use Illuminate\Contracts\Auth\Middleware\AuthenticatesRequests;
 use Illuminate\Contracts\Http\Kernel as HttpKernel;
 use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use NewLogin\Laravel\Console\CheckCommand;
-use NewLogin\Laravel\Http\Middleware\RequireGateway;
+use GatewayLogin\Console\CheckCommand;
+use GatewayLogin\Http\Middleware\RequireGateway;
 
 class GatewayServiceProvider extends ServiceProvider
 {

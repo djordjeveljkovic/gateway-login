@@ -1,16 +1,16 @@
 <?php
 
-namespace NewLogin\Laravel\Tests;
+namespace GatewayLogin\Tests;
 
 use Illuminate\Auth\GenericUser;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use NewLogin\Laravel\Events\GatewayLogin;
-use NewLogin\Laravel\Events\GatewayLoginRefused;
-use NewLogin\Laravel\Gateway;
-use NewLogin\Laravel\GatewayServiceProvider;
+use GatewayLogin\Events\GatewayLogin;
+use GatewayLogin\Events\GatewayLoginRefused;
+use GatewayLogin\Gateway;
+use GatewayLogin\GatewayServiceProvider;
 
 /**
  * The gateway signs a one-time token with Ed25519 after the device logs in; these

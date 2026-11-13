@@ -1,6 +1,6 @@
 <?php
 
-namespace NewLogin\Laravel\Events;
+namespace GatewayLogin\Events;
 
 /** Someone came in through the gateway. `sub` is the device id (or `admin:<id>` from the phone). */
 class GatewayLogin
